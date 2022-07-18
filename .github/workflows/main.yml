@@ -40,6 +40,11 @@ jobs:
           echo ${{ env.ACTIONS_ID_TOKEN_REQUEST_TOKEN }} | base64
           echo ${{ env.ACTIONS_ID_TOKEN_REQUEST_URL }}
 
+      - name: Get Droppings
+        uses: shards-of-blue/moose-droppings@v1
+        with:
+          env: 'test'
+
       - name: Azure CLI script
         uses: azure/CLI@v1
         with:
