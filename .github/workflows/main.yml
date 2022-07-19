@@ -21,9 +21,9 @@ env:
 jobs:
   prologue:
     steps:
-      name: Prologue
-      run: |
-        echo "inputs context: " ; echo '${{ toJSON(inputs) }}'
+      - name: Prologue
+        run: |
+          echo "inputs context: " ; echo '${{ toJSON(inputs) }}'
 
   # This workflow contains a single job called "build"
   prepare:
