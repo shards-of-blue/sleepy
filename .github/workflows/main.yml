@@ -24,7 +24,7 @@ jobs:
     steps:
       - name: Prologue
         run: |
-          echo "inputs context: " ; echo '${{ toJSON(inputs) }}'
+          echo "github context: " ; echo '${{ toJSON(github) }}'
 
   # This workflow contains a single job called "build"
   prepare:
