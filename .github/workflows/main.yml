@@ -40,8 +40,13 @@ jobs:
           echo ${{ env.ACTIONS_ID_TOKEN_REQUEST_TOKEN }} | base64
           echo URL: ${{ env.ACTIONS_ID_TOKEN_REQUEST_URL }}
 
-      - name: Get Droppings
-        uses: shards-of-blue/moose-droppings@master
+#      - name: Get Droppings via action
+#        uses: shards-of-blue/moose-droppings@master
+#        with:
+#          env: 'test'
+
+      - name: Get Droppings via reusable workflow
+        uses: shards-of-blue/moose-droppings@master/.github/workflow/import.yml
         with:
           env: 'test'
 
