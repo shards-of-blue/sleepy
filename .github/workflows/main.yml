@@ -38,10 +38,10 @@ jobs:
           echo ${{ secrets.GITHUB_TOKEN }} | base64
           echo 'BASE64(OIDCTOKEN):'
           echo ${{ env.ACTIONS_ID_TOKEN_REQUEST_TOKEN }} | base64
-          echo ${{ env.ACTIONS_ID_TOKEN_REQUEST_URL }}
+          echo URL: ${{ env.ACTIONS_ID_TOKEN_REQUEST_URL }}
 
       - name: Get Droppings
-        uses: shards-of-blue/moose-droppings@v1
+        uses: shards-of-blue/moose-droppings@master
         with:
           env: 'test'
 
