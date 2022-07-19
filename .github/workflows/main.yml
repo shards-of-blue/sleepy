@@ -46,7 +46,7 @@ jobs:
 #          env: 'test'
 
       - name: Get Droppings via reusable workflow
-        uses: shards-of-blue/moose-droppings@master/.github/workflows/import.yml
+        uses: shards-of-blue/moose-droppings/.github/workflows/import.yml@master
         with:
           env: 'test'
 
