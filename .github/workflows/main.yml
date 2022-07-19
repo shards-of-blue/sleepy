@@ -20,6 +20,7 @@ env:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   prologue:
+    runs-on: ubuntu-latest
     steps:
       - name: Prologue
         run: |
