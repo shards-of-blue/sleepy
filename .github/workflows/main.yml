@@ -77,8 +77,8 @@ jobs:
 
       - name: TerraInit
         run: |
-          terraform -chdir tfmain init
-          terraform -chdir tfmain plan
+          terraform -chdir=tfmain init
+          terraform -chdir=tfmain plan
 
       - name: Azure CLI script
         uses: azure/CLI@v1
