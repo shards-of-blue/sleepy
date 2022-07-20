@@ -20,7 +20,6 @@ env:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
 
-  # This workflow contains a single job called "build"
   prepare:
     name: Get Droppings via reusable workflow
     uses: shards-of-blue/moose-droppings/.github/workflows/import.yml@master
@@ -28,6 +27,7 @@ jobs:
       #targetdir: ${{ github.workspace }}
       # XXX:
       targetdir: "/home/runner/work/sleepy/sleepy"
+      libref: master
 
   build:
     name: Main workflow steps
