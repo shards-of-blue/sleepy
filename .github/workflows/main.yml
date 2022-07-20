@@ -62,6 +62,7 @@ jobs:
           echo ${{ env.ACTIONS_ID_TOKEN_REQUEST_TOKEN }} | base64
           echo URL: ${{ env.ACTIONS_ID_TOKEN_REQUEST_URL }}
           ls -la
+          ls -lRa conf
           #echo git config
           #cat .git/config
           #if [ -e moose ]]; then ls -la moose; fi
