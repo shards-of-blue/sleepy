@@ -65,11 +65,11 @@ jobs:
 #        with:
 #          env: 'test'
 
-       - name: Terraform Init
-         uses: hashicorp/terraform-github-actions/init@v0.4.0
-         with:
-           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-           TF_ACTION_WORKING_DIR: 'tfmain'
+      - name: Terraform Init
+        uses: hashicorp/terraform-github-actions/init@v0.4.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TF_ACTION_WORKING_DIR: 'tfmain'
 
       - name: Azure CLI script
         uses: azure/CLI@v1
