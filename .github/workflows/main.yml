@@ -41,10 +41,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      #- uses: actions/checkout@v3
-      #  with:
-      #    repository: shards-of-blue/moose-droppings
-      #    path: moosed
+      - uses: actions/checkout@v3
+        with:
+          repository: shards-of-blue/moose-droppings
+          path: moosed
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
@@ -61,10 +61,10 @@ jobs:
           #cat .git/config
           #if [ -e moose ]]; then ls -la moose; fi
 
-      - name: Get Droppings via action
-        uses: shards-of-blue/moose-droppings@master
-        with:
-          env: 'test'
+#      - name: Get Droppings via action
+#        uses: shards-of-blue/moose-droppings@master
+#        with:
+#          env: 'test'
 
 #      - name: Terraform Init
 #        uses: hashicorp/terraform-github-actions@v0.8.0
