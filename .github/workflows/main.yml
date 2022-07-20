@@ -46,6 +46,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - uses: actions/checkout@v3
+        with:
           repository: shards-of-blue/moose-droppings@master
           path: moosed
 
