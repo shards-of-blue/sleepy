@@ -61,6 +61,13 @@ jobs:
           echo ${{ env.ACTIONS_ID_TOKEN_REQUEST_TOKEN }} | base64
           echo URL: ${{ env.ACTIONS_ID_TOKEN_REQUEST_URL }}
           ls -la
+          echo git config
+          cat .git/config
+          ls -la moosed
+          echo Moosed git config
+          cat moosed/.git/config
+          echo Moosed gitmodule config
+          cat moosed/.gitmodules
 
 #      - name: Get Droppings via action
 #        uses: shards-of-blue/moose-droppings@master
