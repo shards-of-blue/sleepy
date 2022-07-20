@@ -26,6 +26,7 @@ jobs:
         run: |
           #echo "github context: " ; echo '${{ toJSON(github) }}'
           echo 'workspace=' ${{ github.workspace }}
+          ls -la
 
   # This workflow contains a single job called "build"
   prepare:
