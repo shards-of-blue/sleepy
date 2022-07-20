@@ -32,7 +32,8 @@ jobs:
   build:
     name: Main workflow steps
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    #runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: [ prepare ]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
