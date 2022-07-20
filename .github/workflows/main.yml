@@ -58,18 +58,18 @@ jobs:
           ls -la
           echo git config
           cat .git/config
-          ls -la moose
+          if [ -e moose ]]; then ls -la moose; fi
 
 #      - name: Get Droppings via action
 #        uses: shards-of-blue/moose-droppings@master
 #        with:
 #          env: 'test'
 
-       #- name: Terraform Init
-       #  uses: hashicorp/terraform-github-actions/init@v0.4.0
-       #  env:
-       #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-       #    TF_ACTION_WORKING_DIR: 'tfmain'
+       - name: Terraform Init
+         uses: hashicorp/terraform-github-actions/init@v0.4.0
+         with:
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+           TF_ACTION_WORKING_DIR: 'tfmain'
 
       - name: Azure CLI script
         uses: azure/CLI@v1
