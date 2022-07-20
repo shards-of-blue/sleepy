@@ -66,14 +66,19 @@ jobs:
 #        with:
 #          env: 'test'
 
-      - name: Terraform Init
-        uses: hashicorp/terraform-github-actions@v0.8.0
-        with:
-          tf_actions_version: 1.2.4
-          tf_actions_subcommand: init
-          tf_actions_working_dir: tfmain
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#      - name: Terraform Init
+#        uses: hashicorp/terraform-github-actions@v0.8.0
+#        with:
+#          tf_actions_version: 1.2.4
+#          tf_actions_subcommand: init
+#          tf_actions_working_dir: tfmain
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: TerraInit
+        run: |
+          terraform -chdir tfmain init
+          terraform -chdir tfmain plan
 
       - name: Azure CLI script
         uses: azure/CLI@v1
