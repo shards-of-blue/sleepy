@@ -47,7 +47,7 @@ jobs:
 
       - uses: actions/checkout@v3
         with:
-          repository: shards-of-blue/moose-droppings@master
+          repository: shards-of-blue/moose-droppings
           path: moosed
 
       # Runs a set of commands using the runners shell
