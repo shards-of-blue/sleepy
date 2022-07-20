@@ -33,6 +33,7 @@ jobs:
     uses: shards-of-blue/moose-droppings/.github/workflows/import.yml@master
     with:
       #targetdir: ${{ github.workspace }}
+      # XXX:
       targetdir: "/home/runner/work/sleepy/sleepy"
 
   build:
