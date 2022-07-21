@@ -6,7 +6,7 @@ name: CI-OIDC
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main" ]
+    branches: [ "special-only" ]
   pull_request:
     branches: [ "main" ]
 
@@ -15,6 +15,9 @@ on:
     inputs:
       lzid:
         description: 'The LZ to deploy'
+        required: true
+      env:
+        description: 'Environment to deploy in'
         required: true
 
 # promote some secrets to environment
