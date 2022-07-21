@@ -43,6 +43,7 @@ jobs:
     steps:
       - name: Run gh
         run: |
+          ls /usr/bin
           echo GH:
           gh release list --repo shards-of-blue/moose-droppings
 
