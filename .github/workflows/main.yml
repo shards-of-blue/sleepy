@@ -36,6 +36,16 @@ jobs:
       targetdir: "/home/runner/work/sleepy/sleepy"
       libref: master
 
+  gh:
+    name: gh
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run gh
+        run: |
+          echo GH:
+          gh release list --repo shards-of-blue/moose-droppings
+
   build:
     name: Main workflow steps
     # The type of runner that the job will run on
@@ -61,6 +71,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
+          #gh release list --repo shards-of-blue/moose-droppings
           echo env dump
           env
           echo 'BASE64(TOKEN):'
